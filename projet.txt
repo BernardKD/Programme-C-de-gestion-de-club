@@ -7,7 +7,7 @@ Total des dépenses du club: 52000.00
 
 Budget restant du club: 60820.00
 
-Total des cotisations payées: 2000.00
+Total des cotisations payées: 30500.00
 
 Nombre de membres: 5
 Nombre de tâches: 5
@@ -24,19 +24,7 @@ Nombre de dons: 2
 
 Noms : Landry
 Prenoms : Ovince
-Cotisation payée : 0.00 / 5000.00
-
-Noms : Landry
-Prenoms : Ovince
-Cotisation payée : 0.00 / 5000.00
-
-Noms : Landry
-Prenoms : Ovince
-Cotisation payée : 0.00 / 5000.00
-
-Noms : Landry
-Prenoms : Ovince
-Cotisation payée : 0.00 / 5000.00
+Cotisation payée : 3500.00 / 5000.00
 
 Noms : Ahmadou
 Prenoms : Ousmanou

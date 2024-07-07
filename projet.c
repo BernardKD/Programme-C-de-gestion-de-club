@@ -3,8 +3,31 @@
 #include<string.h>
 #include<stdint.h>
 #include<unistd.h>
+#include<math.h>
 #include<time.h>
 #include"projet.h"
+
+double convertChartoFloat(char *str){
+    double result = 0.0;
+    int i, decimal_found = 0, decimal_place = 0;
+
+    for (i = 0; str[i] != '\0'; i++) {
+        if (str[i] >= '0' && str[i] <= '9') {
+            if (decimal_found) {
+                result = result * 10 + (str[i] - '0');
+                decimal_place++;
+            } else {
+                result = result * 10 + (str[i] - '0');
+            }
+        } else if (str[i] == '.') {
+            decimal_found = 1;
+        }
+    }
+
+    result /= pow(10, decimal_place);
+
+    return result;
+}
 
 float calculerCotisationsTotales(struct membre *m, int totalmembres){
     float cotisationsTotal = 0;
@@ -35,12 +58,11 @@ float calculerDepensesTotal(struct tache *t, int totaltaches){
     return depensesTotal;
 }
 
-void afficherMembresImpaye(struct membre *t, int totalmembres){
+void afficherMembresImpaye(struct membre *t, int totalmembres, float fraisInscription){
     printf("\n====== Membres n'ayant pas payé la totalité de leurs frais d'inscription ======\n");
-	float fonds = 5000.000000;
     for(int i = 0; i < totalmembres; i++){
-        if(t[i].paiement < fonds){
-            printf("Noms : %s\nPrenoms : %s\nCotisation payée : %.2f / %.2f\n\n", t[i].noms, t[i].prenoms, t[i].paiement, fonds);
+        if(t[i].paiement < fraisInscription){
+            printf("Noms : %s\nPrenoms : %s\nCotisation payée : %.2f / %.2f\n\n", t[i].noms, t[i].prenoms, t[i].paiement, fraisInscription);
         }
     }
 }
@@ -54,7 +76,7 @@ void afficherProjetsRealises(struct tache *t, int totaltaches){
     }
 }
 
-void afficherStatistiques(struct membre *m, int totalmembres, struct tache *t, int totaltaches, struct ressource *r, int totalressources){
+void afficherStatistiques(struct membre *m, int totalmembres, struct tache *t, int totaltaches, struct ressource *r, int totalressources, float fraisInscription){
     printf("============================== Statistiques du club ==============================\n\n");
 	
     float budgetTotal = calculerBudgetTotal(t, r, totaltaches, totalressources);
@@ -93,7 +115,7 @@ void afficherStatistiques(struct membre *m, int totalmembres, struct tache *t, i
     }
     printf("Nombre de ressources réservées: %d\n", ressourcesReservees);
 	printf("Nombre de dons: %d\n", dons);
-	afficherMembresImpaye(m, totalmembres);
+	afficherMembresImpaye(m, totalmembres, fraisInscription);
     afficherProjetsRealises(t, totaltaches);
 }
 
@@ -449,7 +471,7 @@ void miseajourressourcesf(struct ressource *t, int totalressources){
     return;
 }
 
-void afficherStatistiquesf(struct membre *m, int totalmembres, struct tache *t, int totaltaches, struct ressource *r, int totalressources){
+void afficherStatistiquesf(struct membre *m, int totalmembres, struct tache *t, int totaltaches, struct ressource *r, int totalressources, float fraisInscription){
 	FILE *f = fopen("projet.txt","w");
 	if(f==NULL){
 		printf("Erreur lors de l'ouverture du fichier !");
@@ -495,10 +517,9 @@ void afficherStatistiquesf(struct membre *m, int totalmembres, struct tache *t, 
 	fprintf(f,"Nombre de dons: %d\n\n", dons);
 
 	fprintf(f,"\n==Membres n'ayant pas payé la totalité de leurs frais d'inscription==\n\n");
-	float fonds = 5000.000000;
     for(int i = 0; i < totalmembres; i++){
-        if(m[i].paiement < fonds){
-			fprintf(f,"Noms : %s\nPrenoms : %s\nCotisation payée : %.2f / %.2f\n\n", m[i].noms, m[i].prenoms, m[i].paiement, fonds);
+        if(m[i].paiement < fraisInscription){
+            fprintf(f,"Noms : %s\nPrenoms : %s\nCotisation payée : %.2f / %.2f\n\n", m[i].noms, m[i].prenoms, m[i].paiement, fraisInscription);
         }
     }
 	

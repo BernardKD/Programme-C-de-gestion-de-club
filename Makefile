@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -Wextra
-OBJECTS = main.o projet.o
+OBJECTS = main.o projet.o -lm
 
 all: main
 

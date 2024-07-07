@@ -28,12 +28,13 @@
 		int reservee;
 		float prixunitaire;
 	};
+	double convertChartoFloat(char *str);
 	float calculerCotisationsTotales(struct membre *m, int totalmembres);
 	float calculerBudgetTotal(struct tache *t, struct ressource *r, int totaltaches, int totalressources);
 	float calculerDepensesTotal(struct tache *t, int totaltaches);
-	void afficherMembresImpaye(struct membre *t, int totalmembres);
+	void afficherMembresImpaye(struct membre *t, int totalmembres, float fraisInscription);
 	void afficherProjetsRealises(struct tache *t, int totaltaches);
-	void afficherStatistiques(struct membre *m, int totalmembres, struct tache *t, int totaltaches, struct ressource *r, int totalressources);
+	void afficherStatistiques(struct membre *m, int totalmembres, struct tache *t, int totaltaches, struct ressource *r, int totalressources, float fraisInscription);
 	int nombremembresf();
 	int nombretachesf();
 	int nombreressourcesf();
@@ -43,7 +44,7 @@
 	void miseajourmembresf(struct membre *t, int totalmembres);
 	void miseajourtachesf(struct tache *t, int totaltaches);
 	void miseajourressourcesf(struct ressource *t, int totalressources);
-	void afficherStatistiquesf(struct membre *m, int totalmembres, struct tache *t, int totaltaches, struct ressource *r, int totalressources);
+	void afficherStatistiquesf(struct membre *m, int totalmembres, struct tache *t, int totaltaches, struct ressource *r, int totalressources, float fraisInscription);
 	void affichermembres(struct membre *t, int totalmembres);
 	void affichertaches(struct tache *t, int totaltaches);
 	void afficherressources(struct ressource *t, int totalressources);

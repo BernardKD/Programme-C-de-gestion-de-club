@@ -3,12 +3,14 @@
 #include<string.h>
 #include<stdint.h>
 #include<unistd.h>
+#include<math.h>
 #include<time.h>
 #include"projet.h"
 int main()
 {
 	int num1=0, num2=0, num3=0;
-	char n[10];
+	char n[10], str[30];
+	float fraisInscription=5000.00000;
 	struct membre *Membre = NULL;
 	struct tache *Tache = NULL;
 	struct ressource *Ressource = NULL;
@@ -186,9 +188,46 @@ int main()
 				break;
 
 			case '4' :
+
+				
 				system("clear");
-				afficherStatistiques(Membre,num1,Tache,num2,Ressource,num3);
-				sleep(10);
+				do{
+					system("clear");
+					printf("###############SUIVI DES BUDGETS ET STATISTIQUES################\n");
+					printf("1- Definir le montant des frais d'inscription\n2- Afficher les statistiques\n3- Retour au menu principal\n0- Quitter\n");
+					printf("Entrez le chiffre correspondant à votre choix : ");
+					scanf("%s",n);	
+					switch (n[0])
+					{
+						case '1' :
+							system("clear");
+							printf("Le montant actuel des frais d'incription est %f \n Entrez le nouveau montant : ",fraisInscription);
+							scanf("%s",str);
+							fraisInscription = (float) convertChartoFloat(str);
+							printf("Le montant des frais d'incription a été mis à jour à %f avec succès !\n",fraisInscription);
+							sleep(2);
+							break;
+
+						case '2' :
+							system("clear");
+							afficherStatistiques(Membre,num1,Tache,num2,Ressource,num3,fraisInscription);
+							sleep(10);
+							break;
+						case '3' :
+							system("clear");
+							break;
+
+						case '0' :
+							system("clear");
+							break;
+
+						default:
+							printf("\nErreur ! Veuillez choisir une option valable.\n");
+							sleep(1);
+						break;
+					}
+					printf("\n");
+				}while(n[0] != '0' && n[0] != '3');
 				break;
 
 			case '0' :
@@ -204,7 +243,7 @@ int main()
 	miseajourmembresf(Membre,num1);
 	miseajourtachesf(Tache,num2);
 	miseajourressourcesf(Ressource,num3);
-	afficherStatistiquesf(Membre,num1,Tache,num2,Ressource,num3);
+	afficherStatistiquesf(Membre,num1,Tache,num2,Ressource,num3,fraisInscription);
 	free(Membre);
 	free(Tache);
 	free(Ressource);
