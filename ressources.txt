@@ -1,0 +1,35 @@
+Ressource N* 1
+Nom : Cahier
+Type : Don
+Quantite : 5
+Reservee : 3
+Prix unitaire : 500.000000
+
+Ressource N* 2
+Nom : Livre
+Type : Achat
+Quantite : 15
+Reservee : 13
+Prix unitaire : 300.000000
+
+Ressource N* 3
+Nom : Stylo
+Type : Achat
+Quantite : 18
+Reservee : 0
+Prix unitaire : 550.000000
+
+Ressource N* 4
+Nom : Table
+Type : Don
+Quantite : 57
+Reservee : 30
+Prix unitaire : 560.000000
+
+Ressource N* 5
+Nom : Chaise
+Type : Achat
+Quantite : 45
+Reservee : 43
+Prix unitaire : 100.000000
+

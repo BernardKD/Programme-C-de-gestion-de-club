@@ -1,0 +1,56 @@
+#######################STATISTIQUES DU CLUB#######################
+
+
+Budget total du club: 112820.00
+
+Total des dépenses du club: 52000.00
+
+Budget restant du club: 60820.00
+
+Total des cotisations payées: 2000.00
+
+Nombre de membres: 5
+Nombre de tâches: 5
+Nombre de ressources: 5
+
+Nombre de tâches terminées: 3
+
+Nombre de ressources réservées: 4
+
+Nombre de dons: 2
+
+
+==Membres n'ayant pas payé la totalité de leurs frais d'inscription==
+
+Noms : Landry
+Prenoms : Ovince
+Cotisation payée : 0.00 / 5000.00
+
+Noms : Landry
+Prenoms : Ovince
+Cotisation payée : 0.00 / 5000.00
+
+Noms : Landry
+Prenoms : Ovince
+Cotisation payée : 0.00 / 5000.00
+
+Noms : Landry
+Prenoms : Ovince
+Cotisation payée : 0.00 / 5000.00
+
+Noms : Ahmadou
+Prenoms : Ousmanou
+Cotisation payée : 2000.00 / 5000.00
+
+
+=============================Projets réalisés=========================
+
+Nom de la tâche : Dormir
+Budget : 20000.00
+
+Nom de la tâche : Coder
+Budget : 2000.00
+
+Nom de la tâche : Chanter
+Budget : 30000.00
+

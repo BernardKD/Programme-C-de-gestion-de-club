@@ -1,0 +1,55 @@
+Membre N* 1
+Noms : Landry
+Prenoms : Ovince
+Numero1 : 658481617
+Numero2 : 653126084
+Role : Chef
+Tranches : 3
+Paiement : 0.000000
+Coordonnees : Ahala-Yaounde
+Horaires : 18:30-22:30
+
+Membre N* 2
+Noms : Landry
+Prenoms : Ovince
+Numero1 : 658481617
+Numero2 : 653126084
+Role : Chef
+Tranches : 3
+Paiement : 0.000000
+Coordonnees : Ahala-Yaounde
+Horaires : 18:30-22:30
+
+Membre N* 3
+Noms : Landry
+Prenoms : Ovince
+Numero1 : 658481617
+Numero2 : 653126084
+Role : Chef
+Tranches : 3
+Paiement : 0.000000
+Coordonnees : Ahala-Yaounde
+Horaires : 18:30-22:30
+
+Membre N* 4
+Noms : Landry
+Prenoms : Ovince
+Numero1 : 658481617
+Numero2 : 653126084
+Role : Chef
+Tranches : 3
+Paiement : 0.000000
+Coordonnees : Ahala-Yaounde
+Horaires : 18:30-22:30
+
+Membre N* 5
+Noms : Ahmadou
+Prenoms : Ousmanou
+Numero1 : 699020304
+Numero2 : 0
+Role : Gardien
+Tranches : 3
+Paiement : 2000.000000
+Coordonnees : Briquetterie-Yaounde
+Horaires : 5:30-19:30
+

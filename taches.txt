@@ -1,0 +1,35 @@
+Tache N* 1
+Responsable : Landry
+Libelle : Dormir
+Budget : 20000.000000
+Statut : Terminée
+Date de fin : 23/12/2024
+
+Tache N* 2
+Responsable : Bernard
+Libelle : Coacher
+Budget : 5000.000000
+Statut : En_attente_de_démarrage
+Date de fin : 10/06/2024
+
+Tache N* 3
+Responsable : Wilfried
+Libelle : Coder
+Budget : 2000.000000
+Statut : Terminée
+Date de fin : 12/12/2024
+
+Tache N* 4
+Responsable : Jafe
+Libelle : Censeur
+Budget : 2500.000000
+Statut : En_cours
+Date de fin : 31/06/2024
+
+Tache N* 5
+Responsable : Ange
+Libelle : Chanter
+Budget : 30000.000000
+Statut : Terminée
+Date de fin : 12/02/2025
+
